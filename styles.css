@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+
+body {
+    height: 125vh;
+    width: 100%;
+    min-width: 105rem;
+    display: flex;
+    justify-content: center;
+    padding: 0 15rem;
+    margin: 0;
+    background-color: black;
+    --top-height: clamp(15rem, 20rem, 25rem);
+    --mid-height: min(20rem, 30%);
+    box-sizing: border-box;
+    --color-top: #425664;
+    --color-mid: #F6F4F2;
+    --color-bottom: #C6AD8F;
+    font-family: "Helvetica", sans-serif;
+}
+
+input {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 2px solid lightgray;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+input:hover {
+    border: 2px solid black;
+}
+
+.imageSection {
+    flex: 0 0 auto;
+    width: 40%;
+    min-height: 60rem;
+    background: url(./img/sleep.jpg);
+    background-position: left 45%;
+    position: relative;
+}
+
+.logo {
+    height: 12rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: relative;
+    top: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: #425664;
+    transition: filter 0.2s;
+}
+
+a:hover {
+    filter:brightness(1.5);
+}
+
+a:visited {
+    color: purple;
+}
+
+.logo {
+    position: absolute;
+    width: 100%;
+}
+
+.logo #logoText {
+    font-size: 5rem;
+    color: white;
+    opacity: 1;
+    font-family: 'Tangerine', cursive;
+}
+
+
+.creditText {
+    padding-left: 2rem;
+    position: absolute;
+    bottom: 30px;
+}
+
+.mainSection {
+    margin-right: 5rem;
+    width: 300px;
+    min-height: 60rem;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    width: 70%;
+    background-color: lightblue;
+    padding: 0px;
+    margin: 0px;
+}
+
+.sectionTop {
+    height: 20rem;
+    background-color: var(--color-top);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 4rem;
+}
+
+
+.sectionTop p {
+    margin: 0;
+    padding-top: 2rem;
+    padding-left: 4rem;
+    padding-bottom: 3rem;
+    font-size: 2rem;
+}
+
+.sectionTop p#quote {
+    margin-top: -1rem;
+    font-style: italic;
+    margin-bottom: -6rem;
+}
+
+.sectionTop span {
+    padding-left: 20em;
+    margin-top: 4rem;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+
+.sectionMid {
+    position: relative;
+    flex-grow: 0;
+    height: 24rem;
+    flex-direction: column;
+    background-color: var(--color-mid);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 2rem;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+	-moz-box-shadow: 0 8px 6px -6px black;
+	box-shadow: 0 8px 6px -6px black;
+}
+
+.sectionMid #passwordInstructions {
+    position: absolute;
+    padding-left: 4rem;
+    font-weight: 600;
+    bottom: 10px;
+}
+
+.heroText {
+    padding-bottom: 3rem;
+    padding-left: 4rem;
+    font-size: 2rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    flex: 0;
+    margin: 0;
+    justify-self: flex-end;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 16rem;
+    gap: 25px;
+    column-gap: 8rem;
+    flex: 0 1 0;
+    margin-bottom: 1rem;
+    padding-left: 4rem;
+}
+
+.form input {
+    display: inline-block;
+    width: 18rem;
+    line-height: 2;
+    transition: border 0.3s;
+}
+
+.form input:not(:placeholder-shown):invalid {
+    border: 2px solid red;
+}
+
+.form input + span {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.form input:not(:placeholder-shown):not(:focus):invalid + span:before {
+    color: red;
+    position: absolute;
+    content: "X";
+    font-size: 1.5rem;
+    top: -32px;
+    right: -20px;
+}
+
+.form #email:not(:placeholder-shown):not(:focus):invalid + span:after {
+    color: red;
+    position: absolute;
+    content: "Please enter a valid email. Example: janesmith@example.com";
+    font-size: 0.75em;
+}
+
+.form #telNum:not(:placeholder-shown):not(:focus):invalid + span:after {
+    color: red;
+    position: absolute;
+    content: "Please enter a valid phone number, format xxx-xxx-xxxx";
+    font-size: 0.75em;
+}
+
+.form #password:not(:placeholder-shown):not(:focus):invalid + span:after {
+    color: red;
+    position: absolute;
+    content: "Please ensure password meets requirements and both passwords match.";
+    font-size: 0.75em;
+}
+
+.form #passwordMatch {
+    padding-top: 0.2rem;
+    content: "";
+    font-size: 1rem;
+    color: red;
+    margin: 0;
+    padding-bottom: 0;
+}
+
+
+.form input:valid {
+    border: 2px solid green;
+}
+
+.form input:not(:placeholder-shown):not(:focus):valid + span:before {
+    color: green;
+    position: absolute;
+    content: "✓";
+    font-size: 1.5rem;
+    top: -32px;
+    right: -20px;
+}
+
+.sectionBottom {
+    flex-grow: 1;
+    padding-left: 4rem;
+    padding-top: 1rem;
+    background-color: var(--color-bottom);
+}
+
+.sectionBottom button {
+    width: 16rem;
+    height: 3.5rem;
+    border: 1px solid var(--color-top);
+    border-radius: 14px;
+    background-color: var(--color-top);
+    font-size: 1rem;
+    color: var(--color-mid);
+    transition: filter 0.2s;
+    opacity: 1;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+	-moz-box-shadow: 0 8px 6px -6px black;
+	box-shadow: 0 8px 6px -6px black;
+}
+
+.sectionBottom button:hover {
+    filter:brightness(1.25);
+}
+
+.sectionBottom p {
+    font-size: 1.25rem;
+}

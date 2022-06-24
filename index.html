@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="imageSection">
+        <div class="logo">
+            <img src="./img/note.svg" alt="Music note" width="75px" id="musicLogo">
+            <span id="logoText">
+                Mozart's Mattresses
+            </span>
+        </div>
+        <div class="creditText">
+            Photo by <a href=https://unsplash.com/@luxgraves>Lux Graves</a> on 
+            <a href="www.unsplash.com">Unsplash</a>
+        </div>
+    </div>
+    <div class="mainSection">
+        <div class="sectionTop">
+            <p>
+            <strong>Are you ready for the sleep of your dreams?</strong>
+            You will have more slumber than you know what to do with.
+            Sign up now to schedule an appointment with our certified 
+            Sleep Analysts.
+            </p>
+            <p id="quote">
+            "He who is tired has done the tiresome."
+            </p>
+            <span>-Mozart Mattresses</span>
+        </div>
+        <div class="sectionMid">
+            <div class="heroText">
+                Sign up today!
+            </div>
+            <form id="signupForm" action="/" form="post">
+                <p class="form">
+                    <label for="firstName">First Name:</label><input type=text
+                    id="firstName" name="firstName" autocomplete 
+                    placeholder="Kat" required><span></span>
+                </p>
+                <p class="form">
+                    <label for="email">Email:</label><input type=email 
+                    id="email" name="email" autocomplete
+                    placeholder="sleepyhead@example.com" required><span></span>
+                    </p>
+                <p class="form">
+                    <label for="password">Password:</label><input type=password
+                    id="password" name="password" autocomplete required
+                    placeholder="********"
+                    pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+                    <span></span>
+                    </p>
+                <p class="form">
+                    <label for="lastName">Last Name:</label><input type=text
+                    id="lastName" name="lastName" autocomplete
+                    placeholder="Napz" required><span></span>
+                    </p>
+                <p class="form">
+                    <label for="telNum">Phone number:</label><input type=tel
+                    id="telNum" name="telNum" autocomplete
+                    placeholder='xxx-xxx-xxxx' required
+                    pattern="\d{3}[\-]\d{3}[\-]\d{4}"><span></span>
+                    </p>
+                <p class="form">
+                    <label for="firstName">Confirm Password:</label><input 
+                    type=password id="confirmPassword" name="password" autocomplete
+                    placeholder="********" required
+                    pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+                    <span></span><span id="passwordMatch"></span>
+                    </p>
+            </form>
+            <p id="passwordInstructions">
+                Passwords must be at least 8 characters long and include at
+                least one number, one capital letter, and one symbol.
+            </p>
+        </div>
+        <div class="sectionBottom">
+            <button type="submit" form="signupForm">Create Account</button>
+            <p>
+                Already have an account? <a href="/">Login</a>
+            </p>
+        </div>
+    </div>
+</body>
+<script src="./javascript.js"></script>
+</html>
